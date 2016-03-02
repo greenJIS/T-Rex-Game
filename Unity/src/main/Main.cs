@@ -8,10 +8,7 @@ public class Main : MonoBehaviour  {
 	private IDictionary<Type, IModelViewController> map;
 
 	void Awake(){
-		
-		Notificator.GetIntance ().AddAsync (this,Constants.NOTIFICATION_METHOD_LOAD_VIEW_PRESENTER);	
-
-		//Architecture n-tiers , MVC + Commander & Handler Pattern all one.
+		//Architecture n-tiers , MVC + Commander & Handler Pattern all one. Optimize!
 		this.map = new Dictionary<Type, IModelViewController>() {
 			{ 
 				typeof(FPSViewPresenter), 
@@ -21,12 +18,21 @@ public class Main : MonoBehaviour  {
 						Instance.ToViewPresenter<IViewPresenter>(GameObject.Find(Constants.CLASS_FPS_VIEW_PRESENTER), this.LoadViewPresenter)
 					)
 				,new FPSController())  
-			}
+			},
+			{
+            	typeof(TimerScoreViewPresenter),
+              	new ModelViewController(
+              		new ModelView(
+              			new TimerScoreModel(),
+              			Instance.ToViewPresenter<IViewPresenter>(GameObject.Find(Constants.CLASS_TIMER_SCORE_VIEW_PRESENTER), this.LoadViewPresenter)
+              		)
+              	,new TimerScoreController())
+            }
 		};
 	}
 
 
-	// Notification : Avisa de que la vista ya está disponible
+	// Handler : Avisa de que la vista ya está disponible
 	private void LoadViewPresenter(object sender, EventArgs args) {
 		var typeView = ((IViewPresenter)sender).GetType();
 		var mvc = this.map.ContainsKey(typeView) ? this.map[typeView] : null ; 
@@ -42,11 +48,14 @@ public class Main : MonoBehaviour  {
 		
 
 
-	// Handler : Avisa de que el /modelo/vista/controlador de nuestro componente
-	// ya está cargado y lanza el segundo plano tareas adicionales.
+	// Handler : Avisa de que el modelo/vista/controlador de nuestro componente
+	// ya está cargado en el render y lanza en segundo plano tareas adicionales Asíncronas.
 	private void LoadCoroutine(object sender, EventArgs args){
 		var coroutine = ((IController)sender).Coroutine;
-		this.StartCoroutine (coroutine);
+		if(coroutine==null)
+		    return;
+
+        this.StartCoroutine (coroutine);
 	}
 
 }
