@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IViewModel
+public interface IModelView
 {
 	IModel model { get;  set; }
-	GameObject view { get; set;}
+	IViewPresenter viewPresenter { get; set;}
 }
 
 

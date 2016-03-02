@@ -2,9 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-public interface IFPSViewPresenter
+public interface IFPSViewPresenter : IViewPresenter
 {
-	void OnGUI();
-	Coroutine StartCoroutine(IEnumerator coroutine);
 	T GetComponent<T>();
 }
