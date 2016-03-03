@@ -1,6 +1,7 @@
 # T-Rex Game from Chrome
 
-### Architectural pattern / MVC
+### Architectural pattern / MVC+Adapter+ServiceAsync
+
 ![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/MVC.png)
 
 
