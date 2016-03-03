@@ -1,5 +1,4 @@
-# T-Rex-Game
-T-Rex game of the Browser Chrome
+# T-Rex Game from Chrome
 
 ### Architectural pattern / MVC
 ![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/MVC.png)
