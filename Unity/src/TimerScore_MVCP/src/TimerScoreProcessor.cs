@@ -20,7 +20,7 @@ public class TimerScoreProcessor  : ITimerScoreProcessor
 
 			if (this.timerScoreModel.score % CHECK_POINT == 0)
 				this.timerScoreModel.playSound = true;
-
+			
 			yield return this.waitForSeconds;
 		}
 	}

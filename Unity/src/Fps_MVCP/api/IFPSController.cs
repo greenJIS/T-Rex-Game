@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface IFPSController : IController {
+public interface IFPSController  {
 
 }
 

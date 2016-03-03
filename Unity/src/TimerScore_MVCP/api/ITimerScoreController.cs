@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public interface ITimerScoreController : IController {
+public interface ITimerScoreController {
 	ITimerScoreController Init ();
 	ITimerScoreController Reset ();
 	ITimerScoreController Stop ();

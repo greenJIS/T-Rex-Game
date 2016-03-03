@@ -2,7 +2,7 @@
 using System;
 using System.Collections;
 
-public class TimerScoreController : ITimerScoreController {
+public class TimerScoreController : Controller, ITimerScoreController {
 	
 	private const string HI = "HI ";
 	private const string SCORE = "SCORE";
@@ -15,26 +15,10 @@ public class TimerScoreController : ITimerScoreController {
 	private TextMesh textMeshScore{ get; set; }	
 	private TextMesh textMeshHiScore{ get; set; }	
 
-	public IEnumerator Coroutine { get; set; }
-	public event EventHandler InitializeCoroutine;
-
-
-	public TimerScoreController (){
+	public TimerScoreController (): base () {
 	}
 
-	private IModelView postConstruct;
-	public IModelView PostConstruct { 
-		get {
-			return this.postConstruct;
-		}
-		set {
-			this.postConstruct = this.OnLoadPostContructor (value);
-			if (InitializeCoroutine != null)
-				this.InitializeCoroutine (this, EventArgs.Empty);
-		}
-	}
-
-	private IModelView OnLoadPostContructor (IModelView modelView) {
+	public override  IModelView OnLoadPostContructor (IModelView modelView) {
 		
 		timerScoreModel = (TimerScoreModel) modelView.model;
 		timerScoreModel.Recalculate  += (sender, e) =>  Debug.Log("OnRecalculate  "+sender.ToString());

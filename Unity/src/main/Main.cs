@@ -5,11 +5,18 @@ using System;
 
 public class Main : MonoBehaviour  {
 
-	private IDictionary<Type, IModelViewController> map;
+	private IDictionary<Type, IModelViewController> MVC;
 
 	void Awake(){
-		//Architecture n-tiers , MVC + Commander & Handler Pattern all one. Optimize!
-		this.map = new Dictionary<Type, IModelViewController>() {
+		this.createContext ();
+		DontDestroyOnLoad (this.gameObject);
+	}
+
+	//Architecture n-tiers , Model-View-Controller + [Commander & Handler & ObjectValue] Pattern all one.
+	// TODO: Factory Methods & lambdas
+	private void createContext() {
+		
+		MVC = new Dictionary<Type, IModelViewController>() {
 			{ 
 				typeof(FPSViewPresenter), 
 				new ModelViewController(
@@ -19,26 +26,33 @@ public class Main : MonoBehaviour  {
 					)
 				,new FPSController())  
 			},
-			{
-            	typeof(TimerScoreViewPresenter),
-              	new ModelViewController(
-              		new ModelView(
-              			new TimerScoreModel(),
-              			Instance.ToViewPresenter<IViewPresenter>(GameObject.Find(Constants.CLASS_TIMER_SCORE_VIEW_PRESENTER), this.LoadViewPresenter)
-              		)
-              	,new TimerScoreController())
-            }
+			{ 
+				typeof(TimerScoreViewPresenter), 
+				new ModelViewController(
+					new ModelView(
+						new TimerScoreModel(),
+						Instance.ToViewPresenter<IViewPresenter>(GameObject.Find(Constants.CLASS_TIMER_SCORE_VIEW_PRESENTER), this.LoadViewPresenter)
+					)
+				,new TimerScoreController())  
+			}
+
+			// { ... } 
+
 		};
 	}
 
 
-	// Handler : Avisa de que la vista ya está disponible
+	// Notification : Avisa de que la vista ya está disponible
 	private void LoadViewPresenter(object sender, EventArgs args) {
 		var typeView = ((IViewPresenter)sender).GetType();
-		var mvc = this.map.ContainsKey(typeView) ? this.map[typeView] : null ; 
+		var mvc = MVC.ContainsKey(typeView) ? MVC[typeView] : null ; 
 		if (mvc == null)
 			return;
 
+		this.InitializeController(mvc);
+	}
+
+	private void InitializeController(IModelViewController mvc){
 		var controller = mvc.controller;
 		controller.InitializeCoroutine += (_sender, e) => Debug.Log ("OnPostContructor : " + _sender.ToString ());
 		controller.InitializeCoroutine += LoadCoroutine;
@@ -46,16 +60,12 @@ public class Main : MonoBehaviour  {
 		controller.PostConstruct = mvc.modelView;
 	}
 		
-
-
-	// Handler : Avisa de que el modelo/vista/controlador de nuestro componente
-	// ya está cargado en el render y lanza en segundo plano tareas adicionales Asíncronas.
+	// Handler : Avisa de que el /modelo/vista/controlador de nuestro componente
+	// ya está cargado y lanza el segundo plano tareas adicionales.
 	private void LoadCoroutine(object sender, EventArgs args){
 		var coroutine = ((IController)sender).Coroutine;
-		if(coroutine==null)
-		    return;
-
-        this.StartCoroutine (coroutine);
+		if(coroutine!=null)
+			this.StartCoroutine (coroutine);
 	}
 
 }

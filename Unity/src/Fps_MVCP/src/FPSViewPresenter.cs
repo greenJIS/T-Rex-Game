@@ -4,17 +4,16 @@ using UnityEngine;
 public class FPSViewPresenter : MonoBehaviour, IFPSViewPresenter
 {
 	public event EventHandler Initialize;
-	private bool isInitialize;
 
 	void Awake(){
-		
+
 	}
 
 	void Start (){
 		this.IsInitialize = true;
-		//Notificator.GetIntance ().PostAsync (this,Constants.NOTIFICATION_METHOD_LOAD_VIEW_PRESENTER,this)
 	}
 
+	private bool isInitialize;
 	public bool IsInitialize { 
 		get {
 			return this.isInitialize;
@@ -26,5 +25,4 @@ public class FPSViewPresenter : MonoBehaviour, IFPSViewPresenter
 				this.Initialize (this, EventArgs.Empty);
 		}
 	}
-
 }

@@ -10,8 +10,6 @@ public class FPSModel : IFPSModel {
 		this.fps = 0;
 	}
 
-	//public void PostConstruct(){}
-
 	public event EventHandler ReCalculate;
 
 	public float fps { 

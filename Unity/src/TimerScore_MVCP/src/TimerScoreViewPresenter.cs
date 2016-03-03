@@ -8,7 +8,7 @@ public class TimerScoreViewPresenter : MonoBehaviour, ITimerScoreViewPresenter
 	private bool isInitialize;
 
 	void Awake(){
-		
+
 	}
 
 	void Start (){
@@ -22,7 +22,7 @@ public class TimerScoreViewPresenter : MonoBehaviour, ITimerScoreViewPresenter
 		set {
 			this.isInitialize = value;
 
-			if (this.Initialize != null)
+			if (Initialize != null)
 				this.Initialize (this, EventArgs.Empty);
 		}
 	}

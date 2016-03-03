@@ -2,32 +2,17 @@
 using System.Collections;
 using System;
 
-public class FPSController : IFPSController {
+public class FPSController : Controller, IFPSController {
 
 	private TextMesh textMesh{ get; set; }	
 	private IFPSViewPresenter fpsView;
 	private IFPSModel FpsModel;
 	private IFPSProcessor fpsProcessor;
 
-	public IEnumerator Coroutine { get; set; }
-	public event EventHandler InitializeCoroutine;
-
-	public FPSController (){
-	}
-
-	private IModelView postConstruct;
-	public IModelView PostConstruct { 
-		get {
-			return this.postConstruct;
-		}
-		set {
-			this.postConstruct = this.OnLoadPostContructor (value);
-			if (InitializeCoroutine != null)
-				this.InitializeCoroutine (this, EventArgs.Empty);
-		}
+	public FPSController () : base() {
 	}
 		
-	private IModelView OnLoadPostContructor (IModelView modelView) {
+	public override IModelView OnLoadPostContructor (IModelView modelView) {
 
 		this.FpsModel = (IFPSModel) modelView.model;
 		this.FpsModel.ReCalculate += (sender, args) => Debug.Log("FPS Recalculate "+((FPSModel)sender).fps);
