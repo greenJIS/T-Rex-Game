@@ -34,7 +34,16 @@ public class Main : MonoBehaviour  {
 						Instance.ToViewPresenter<IViewPresenter>(GameObject.Find(Constants.CLASS_TIMER_SCORE_VIEW_PRESENTER), this.LoadViewPresenter)
 					)
 				,new TimerScoreController())  
-			}
+			},
+			{
+                typeof(GameOverViewPresenter),
+                new ModelViewController (
+                    new ModelView (
+                        new GameOverModel (),
+                        Instance.ToViewPresenter<IViewPresenter> (GameObject.Find (Constants.CLASS_TIMER_GAME_OVER_VIEW_PRESENTER), this.LoadViewPresenter)
+                    )
+                    , new GameOverController ())
+            }
 
 			// { ... } 
 
@@ -67,5 +76,12 @@ public class Main : MonoBehaviour  {
 		if(coroutine!=null)
 			this.StartCoroutine (coroutine);
 	}
+
+	//otorga vidibilidad solamente del controlador, ocultado el modelo y la vista que no deben de ser
+    //visibles para la modificación desde fuera de esta clase.
+    public IDictionary<Type, IModelViewIController> mvc {
+        get { return MVC; }
+        private set { MVC = value; }
+    }
 
 }
