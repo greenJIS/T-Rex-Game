@@ -1,7 +1,7 @@
 # T-Rex Game from Chrome
 
 ### Architectural pattern / MVC
-![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/MVC.png)
+![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/MVCAS.png)
 
 
 ### [Proof of Concept Video PlayList](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
