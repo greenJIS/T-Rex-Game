@@ -1,6 +1,7 @@
 # T-Rex Game from Chrome
 
-### Architectural pattern / MVC
+### Context based in Robotleg
+### Architectural pattern / MVC +  Adapter + Service Async
 ![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/MVCAS.png)
 
 
