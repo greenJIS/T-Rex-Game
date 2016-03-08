@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public interface IFPSModel : IModel {
+public interface IFPSModel  {
 	float fps { get; }
 	event EventHandler ReCalculate;
 }

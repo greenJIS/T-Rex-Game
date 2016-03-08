@@ -2,11 +2,10 @@
 using System.Collections;
 using System;
 
-public class FPSService : IFPSService {
+public class FPSService : Service , IFPSService {
 
 	public event EventHandler FpsUpdated;
 	private float _fps;
-	private WaitForSeconds waitForSeconds;
 
 
 	public static IService Create(){
@@ -15,12 +14,12 @@ public class FPSService : IFPSService {
 
 	FPSService()
 	{
-		//MicroOptimizacion
-		this.waitForSeconds = new WaitForSeconds(1f);
+			//MicroOptimizacion
+		base.waitForSeconds = new WaitForSeconds(1f);
 		this._fps = 0;
 	}
 
-	public IEnumerator Recalculate ()
+	public override IEnumerator Async()
 	{
 		while(true)
 		{
@@ -29,16 +28,13 @@ public class FPSService : IFPSService {
 			if (FpsUpdated != null)
 				FpsUpdated(this, EventArgs.Empty);
 
-			yield return this.waitForSeconds;
+			yield return base.waitForSeconds;
 		}
-	}
+    }
 
 	public float fps
 	{ 
-		get
-		{
-			return this._fps;
-		}
+		get { return this._fps; }
 	}
 }
 

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
 
-public interface IFPSService : IService
+public interface IFPSService 
 {
 	float fps { get; }
-	IEnumerator Recalculate ();
 	event EventHandler FpsUpdated;
 }
 
