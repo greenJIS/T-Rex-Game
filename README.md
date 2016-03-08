@@ -6,9 +6,9 @@
 
 
 
-### [Proof of Concept Video PlayList](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
+### [Video PlayList](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
-[![](https://github.com/vicboma1/T-Rex-Game/blob/master/gif/T-Rex.gif)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
+[![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/cover.png)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
 
 ### Animation T-Rex
