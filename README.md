@@ -26,4 +26,4 @@
 
 
 ### Design
-[](https://github.com/vicboma1/T-Rex-Game/blob/master/img/T-Rex_Bend.png)
+[](https://github.com/vicboma1/T-Rex-Game/blob/master/img/T-Rex-Bend.png)
