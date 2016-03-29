@@ -8,7 +8,7 @@
 
 ### [Video PlayList](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
-[![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/newCover.png)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
+[![](https://github.com/vicboma1/T-Rex-Game/blob/master/gif/T-Rex-Intro.gif)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
 
 ### Animation T-Rex
