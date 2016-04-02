@@ -1,5 +1,7 @@
 # T-Rex Game from Chrome
 
+[![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/Color.png)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
+
 ### Context based in Robotleg
 ### Architectural pattern / MVC +  Adapter + Service Async
 ![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/MVCAS.png)
