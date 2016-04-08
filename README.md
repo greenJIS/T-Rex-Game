@@ -1,4 +1,8 @@
 # T-Rex Game from Chrome
+## Builds:
+### Desktop (Mac/Windows/Linux)
+### Mobile (Android/iOS)
+### HTML5 (Firefox/Chrome)
 
 [![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/Color.png)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
@@ -9,6 +13,13 @@
 
 
 ### [Video PlayList](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
+* Mobile Release
+* Desktop Release
+* HTML5 Release
+* Optimizations & refactors
+* Dynamic Background
+* Highlight CheckPoint 
+* ...
 
 [![](https://github.com/vicboma1/T-Rex-Game/blob/master/gif/T-Rex-Intro.gif)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
