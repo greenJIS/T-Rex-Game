@@ -4,7 +4,7 @@
 ### Mobile (Android/iOS)
 ### HTML5 (Firefox/Chrome)
 
-[![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/Color.png)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
+[![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/Cover_2.png)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
 ### Context based in Robotleg
 ### Architectural pattern / MVC +  Adapter + Service Async
