@@ -38,7 +38,8 @@
 [![](https://github.com/vicboma1/T-Rex-Game/blob/master/gif/T-Rex-highlight.gif)](https://www.youtube.com/watch?v=UMsEKkNt7uQ&index=2&list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
 
-### Design
+### Design & evolution
+
 ![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/T-Rex-Bend.png)
 
 ![](https://github.com/vicboma1/T-Rex-Game/blob/master/img/T-Rex_11.13.13.png)
