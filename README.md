@@ -23,7 +23,7 @@
 * Highlight CheckPoint 
 * ...
 
-[![](https://github.com/vicboma1/T-Rex-Game/blob/master/gif/T-Rex-Intro.gif)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
+[![](https://media.giphy.com/media/3o6ZsUhhaal0wkafyo/source.gif)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
 
 
 ### Animation T-Rex
