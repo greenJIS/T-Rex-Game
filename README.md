@@ -23,9 +23,6 @@
 * Highlight CheckPoint 
 * ...
 
-[![](https://media.giphy.com/media/3o6ZsUhhaal0wkafyo/source.gif)](https://www.youtube.com/playlist?list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ)
-
-
 ### Animation T-Rex
 
 [![](https://github.com/vicboma1/T-Rex-Game/blob/master/gif/T-Rex-Animation.gif)](https://www.youtube.com/watch?v=3QJkvJgPsPw&list=PLNph7ndeSqE8BdtURZZJG-B1l7MJzHYAJ&index=6)
